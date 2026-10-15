@@ -1,5 +1,5 @@
 // Replace with real WhatsApp number: country code + number, no + or spaces.
-const EDUCATUS_WHATSAPP_NUMBER = "+919432808518";
+const EDUCATUS_WHATSAPP_NUMBER = "919432808518";
 const header=document.getElementById('header'),progress=document.getElementById('progress'),menu=document.getElementById('menu'),nav=document.getElementById('nav');
 function scrollUI(){header.classList.toggle('scrolled',scrollY>15);const t=document.documentElement.scrollHeight-innerHeight;progress.style.width=(t?scrollY/t*100:0)+'%'}addEventListener('scroll',scrollUI,{passive:true});scrollUI();
 menu.onclick=()=>{const o=nav.classList.toggle('open');menu.classList.toggle('open',o);document.body.classList.toggle('lock',o)};nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');menu.classList.remove('open');document.body.classList.remove('lock')});
