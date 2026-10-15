@@ -1,32 +1,28 @@
-EDUCATUS WEBSITE — RESTARTED VERSION
+EDUCATUS — WORLD CLASS WEBSITE
 
-This is a completely fresh website concept based only on the original brief.
+UPLOAD THESE TO THE ROOT OF YOUR GITHUB REPOSITORY:
+index.html
+styles.css
+script.js
+vercel.json
+assets/logo.svg
+assets/og-card.svg
 
-FILES
-- index.html
-- styles.css
-- script.js
+IMPORTANT BEFORE PUBLISHING
+1. Open script.js and replace:
+   const EDUCATUS_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+   Example: "919876543210"
 
-BEFORE PUBLISHING
-Replace:
-1. 91XXXXXXXXXX with the actual WhatsApp number including country code.
-   Example: 919876543210
-2. +91 XXXXX XXXXX with the display phone number.
-3. hello@educatus.in with the correct email address.
-4. Your area / city with the actual location.
-5. Add or remove classes to match the actual Educatus offering.
+2. In index.html replace:
+   +91 XXXXX XXXXX
+   hello@educatus.in
+   Your area / city
 
-GOOGLE SITES STRUCTURE
-Use these sections in Google Sites:
-1. Home / Hero banner
-2. Learning approach
-3. Academic Classes
-4. Activity Classes
-5. About Educatus
-6. WhatsApp Admissions CTA
-7. Contact & Enquiries
+VERCEL
+Framework preset: Other
+Build command: leave empty
+Output directory: leave empty
 
-WHATSAPP BUTTON FORMAT
-https://wa.me/91XXXXXXXXXX?text=Hello%20Educatus%2C%20I%20would%20like%20to%20enquire.
+If the repo is already connected to Vercel, committing these replacement files should trigger an automatic redeploy.
 
-The website can also be hosted as a normal website on GitHub Pages, Netlify, Vercel or Cloudflare Pages.
+This version intentionally does not invent testimonials, ratings, student counts or results. Add those only when you have genuine information.

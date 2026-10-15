@@ -1,305 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Educatus | Learn with Confidence</title>
-  <meta name="description" content="Educatus offers academic and activity classes designed to help children learn with confidence, curiosity and joy.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1530">
+<meta name="description" content="Educatus — academic support and activity classes for confident, curious learners.">
+<meta property="og:title" content="Educatus | Confidence starts with understanding">
+<meta property="og:description" content="Academic support and creative activity classes for growing minds.">
+<meta property="og:image" content="assets/og-card.svg">
+<title>Educatus | Learn • Explore • Grow</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="wrap nav">
-    <a href="#home" class="brand">
-      <div class="brand-mark">E</div>
-      <div>
-        <div class="brand-name">Educatus</div>
-        <div class="brand-tag">Learn • Explore • Grow</div>
-      </div>
-    </a>
-
-    <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-
-    <nav id="mainNav">
-      <a href="#home">Home</a>
-      <a href="#academics">Academic Classes</a>
-      <a href="#activities">Activity Classes</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="nav-button">Enquire Now</a>
-    </nav>
-  </div>
-</header>
-
+<div class="progress" id="progress"></div>
+<header id="header"><div class="wrap nav">
+<a class="brand" href="#home"><img src="assets/logo.svg" alt=""><span><b>Educatus</b><small>Learn • Explore • Grow</small></span></a>
+<button class="menu" id="menu" aria-label="Open menu"><i></i><i></i><i></i></button>
+<nav id="nav"><a href="#programs">Programs</a><a href="#approach">Our Approach</a><a href="#activities">Activities</a><a href="#about">About</a><a href="#faq">FAQ</a><a class="navcta" href="#contact">Enquire Now</a></nav>
+</div></header>
 <main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <div class="pill">A better place to learn and grow</div>
-        <h1>Learning that builds <span>confidence for life.</span></h1>
-        <p class="hero-text">
-          Educatus combines strong academic guidance with creative activity classes,
-          giving children the support, confidence and freedom to discover their best.
-        </p>
+<section class="hero" id="home"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap hero-grid">
+<div class="hero-copy reveal"><span class="pill"><i></i>A modern learning space for growing minds</span><h1>Confidence starts with <em>understanding.</em></h1><p>Educatus brings focused academic guidance and enriching activity classes together — helping children build strong foundations, curiosity and the confidence to keep growing.</p><div class="actions"><a href="#" class="btn primary wa" data-msg="Hello Educatus, I would like to know more about your classes.">Start an Enquiry <b>→</b></a><a href="#programs" class="btn secondary">Explore Programs</a></div><div class="micro"><span><b>01</b>Concept-first</span><span><b>02</b>Personal attention</span><span><b>03</b>Balanced growth</span></div></div>
+<div class="hero-card reveal d1"><div class="dash"><div class="dash-top"><span class="mini"><img src="assets/logo.svg" alt="">Educatus Learning Studio</span><span class="status"><i></i> Growing every day</span></div><div class="dash-title"><small>THE EDUCATUS EXPERIENCE</small><h2>Learn deeply.<br>Grow confidently.</h2></div><div class="tiles"><div class="tile wide"><span class="ico blue">∑</span><div><small>Academic Focus</small><b>Mathematics</b></div><strong>↗</strong></div><div class="tile"><span class="ico violet">⚗</span><div><small>Discover</small><b>Science</b></div></div><div class="tile"><span class="ico gold">✦</span><div><small>Create</small><b>Art & Music</b></div></div></div><div class="float f1"><span>✓</span><div><b>Personal attention</b><small>Support at every step</small></div></div><div class="float f2"><span>★</span><div><b>Positive learning</b><small>Confidence over pressure</small></div></div></div></div>
+</div><div class="wrap hero-strip reveal d2"><span>Academic learning</span><i></i><span>Creative expression</span><i></i><span>Movement & energy</span><i></i><span>Confidence building</span></div></section>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Educatus%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank">
-            WhatsApp Enquiry
-          </a>
-          <a class="btn btn-secondary" href="#academics">Explore Classes</a>
-        </div>
+<section class="section" id="programs"><div class="wrap"><div class="head reveal"><div><small>ACADEMIC PROGRAMS</small><h2>Strong foundations.<br>Clearer thinking.</h2></div><p>Thoughtful academic support designed to make difficult concepts easier, strengthen fundamentals and help learners become more independent.</p></div><div class="cards">
+<article class="program reveal"><span class="num">01</span><div class="picon blue">÷</div><h3>Mathematics</h3><p>Concept clarity, guided problem solving, regular practice and revision that builds confidence.</p><div class="tags"><span>Concept clarity</span><span>Problem solving</span><span>Exam readiness</span></div><a href="#contact">Enquire about Mathematics →</a></article>
+<article class="program special reveal d1"><span class="num">02</span><div class="picon violet">⚗</div><h3>Science</h3><p>Clear explanations and practical examples that turn complex ideas into real understanding.</p><div class="tags"><span>Physics</span><span>Chemistry</span><span>Biology</span></div><a href="#contact">Enquire about Science →</a></article>
+<article class="program reveal d2"><span class="num">03</span><div class="picon gold">▤</div><h3>Other Subjects</h3><p>Additional academic support based on grade, curriculum, learner needs and batch availability.</p><div class="tags"><span>Grade support</span><span>Homework</span><span>Revision</span></div><a href="#contact">Check availability →</a></article>
+</div></div></section>
 
-        <div class="trust-row">
-          <div><strong>Personal</strong><span>Attention</span></div>
-          <div><strong>Concept</strong><span>Clarity</span></div>
-          <div><strong>Creative</strong><span>Learning</span></div>
-        </div>
-      </div>
+<section class="section dark" id="approach"><div class="wrap split"><div class="reveal"><small>OUR APPROACH</small><h2>Learning should feel <em>clear, encouraging and alive.</em></h2><p>We focus on the child behind the marks — how they understand, what motivates them, where they hesitate and what helps them move forward.</p><a href="#" class="btn glass wa" data-msg="Hello Educatus, I would like to understand your teaching approach and current batches.">Talk to Educatus</a></div><div class="steps reveal d1"><article><b>1</b><div><h3>Understand</h3><p>Start with clear concepts and simple explanations.</p></div></article><article><b>2</b><div><h3>Practice</h3><p>Build confidence through guided application.</p></div></article><article><b>3</b><div><h3>Apply</h3><p>Use knowledge independently in new situations.</p></div></article><article><b>4</b><div><h3>Grow</h3><p>Celebrate progress and build a stronger learning mindset.</p></div></article></div></div></section>
 
-      <div class="hero-panel">
-        <div class="hero-shape shape-one"></div>
-        <div class="hero-shape shape-two"></div>
-        <div class="feature-card large-card">
-          <div class="card-label">WHY EDUCATUS?</div>
-          <h3>Where academics meet creativity.</h3>
-          <p>Structured learning, engaging activities and a positive environment — all in one place.</p>
-          <div class="mini-grid">
-            <div class="mini-card">📘<span>Academics</span></div>
-            <div class="mini-card">🎨<span>Art</span></div>
-            <div class="mini-card">🎵<span>Music</span></div>
-            <div class="mini-card">💃<span>Zumba</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section soft" id="activities"><div class="wrap"><div class="head reveal"><div><small>ACTIVITY CLASSES</small><h2>Creativity deserves<br>a place to grow.</h2></div><p>Enriching classes that encourage self-expression, movement, imagination and confidence beyond academics.</p></div><div class="activity-grid"><article class="activity art reveal"><span class="symbol">✦</span><small>01 / ART</small><h3>Make imagination visible.</h3><p>Creative sessions that strengthen observation, expression, patience and artistic confidence.</p><footer>Explore • Create • Express <b>↗</b></footer></article><article class="activity music reveal d1"><span class="symbol">♫</span><small>02 / MUSIC</small><h3>Find rhythm. Find your voice.</h3><p>Musical learning that builds listening, rhythm, expression and performance confidence.</p><footer>Listen • Learn • Perform <b>↗</b></footer></article><article class="activity zumba reveal d2"><span class="symbol">↗</span><small>03 / ZUMBA</small><h3>Move with energy and joy.</h3><p>High-energy movement sessions for fitness, coordination, confidence and fun.</p><footer>Move • Smile • Energise <b>↗</b></footer></article></div></div></section>
 
-  <section class="intro-strip">
-    <div class="wrap strip-grid">
-      <div>
-        <span>01</span>
-        <h3>Learn with clarity</h3>
-        <p>We focus on understanding concepts, not just memorising answers.</p>
-      </div>
-      <div>
-        <span>02</span>
-        <h3>Build confidence</h3>
-        <p>Children learn better when they feel supported, encouraged and comfortable asking questions.</p>
-      </div>
-      <div>
-        <span>03</span>
-        <h3>Enjoy the journey</h3>
-        <p>Creative activities bring balance, energy and enjoyment into the learning experience.</p>
-      </div>
-    </div>
-  </section>
+<section class="section about" id="about"><div class="wrap split"><div class="quote reveal"><div><span>“</span><blockquote>Every child learns differently. The right environment helps them discover what they are capable of.</blockquote><p><b>Curiosity</b><b>Confidence</b><b>Creativity</b></p></div></div><div class="about-copy reveal d1"><small>ABOUT EDUCATUS</small><h2>Teaching with patience, purpose and positivity.</h2><p>Educatus is built around a simple belief: children learn best when they understand, participate and feel safe enough to ask questions.</p><p>Our environment brings academics and activities together so children can develop knowledge, confidence, creativity and self-expression.</p><div class="values"><div><span>✓</span><p><b>Concept-first learning</b><small>Understanding before memorisation.</small></p></div><div><span>✓</span><p><b>Personal attention</b><small>Support matched to each learner’s pace.</small></p></div><div><span>✓</span><p><b>Positive learning environment</b><small>Encouragement that builds confidence.</small></p></div></div></div></div></section>
 
-  <section class="section" id="academics">
-    <div class="wrap">
-      <div class="section-heading">
-        <div class="eyebrow">Academic Classes</div>
-        <h2>Strong foundations for better results.</h2>
-        <p>
-          Focused learning support designed to make difficult topics easier to understand
-          and help students progress with confidence.
-        </p>
-      </div>
+<section class="parent"><div class="wrap"><div class="parent-card reveal"><div><small>FOR PARENTS</small><h2>Not sure which class is the right fit?</h2><p>Tell us your child’s grade or age, the subject or activity you’re interested in, and your preferred timing. We’ll guide you to the most suitable available option.</p></div><a href="#" class="btn white wa" data-msg="Hello Educatus, I need help choosing the right class for my child.">Get guidance on WhatsApp</a></div></div></section>
 
-      <div class="course-grid">
-        <article class="course-card">
-          <div class="course-icon">➗</div>
-          <h3>Mathematics</h3>
-          <p>Concept building, problem solving, regular practice and revision support.</p>
-          <ul>
-            <li>Concept clarity</li>
-            <li>Practice-based learning</li>
-            <li>Exam preparation</li>
-          </ul>
-          <a href="#contact">Enquire about Mathematics →</a>
-        </article>
+<section class="section" id="faq"><div class="wrap faq"><div class="reveal"><small>FREQUENTLY ASKED QUESTIONS</small><h2>Everything you may want to know.</h2><p>For exact fees, timings and current batch availability, send us a quick WhatsApp message.</p></div><div class="faq-list reveal d1"><article><button>Which grades do you teach?<b>+</b></button><div><p>Grade coverage can vary by subject and current batch. Contact Educatus with your child’s grade and subject for current availability.</p></div></article><article><button>Do you offer trial or introductory sessions?<b>+</b></button><div><p>Please enquire directly for current introductory-session options, as availability may vary by program.</p></div></article><article><button>How do I get fees and class timings?<b>+</b></button><div><p>Send a WhatsApp enquiry with the child’s grade or age, subject or activity, and preferred timing.</p></div></article><article><button>Can my child join academic and activity classes?<b>+</b></button><div><p>Yes, subject to schedule and batch availability. Educatus is designed to support balanced development.</p></div></article></div></div></section>
 
-        <article class="course-card featured">
-          <div class="course-icon">🔬</div>
-          <h3>Science</h3>
-          <p>Simple explanations, practical examples and deeper understanding of core concepts.</p>
-          <ul>
-            <li>Physics fundamentals</li>
-            <li>Chemistry basics</li>
-            <li>Biology understanding</li>
-          </ul>
-          <a href="#contact">Enquire about Science →</a>
-        </article>
-
-        <article class="course-card">
-          <div class="course-icon">📚</div>
-          <h3>Other Subjects</h3>
-          <p>Additional subject support may be available depending on grade and current batches.</p>
-          <ul>
-            <li>Grade-based support</li>
-            <li>Homework guidance</li>
-            <li>Revision assistance</li>
-          </ul>
-          <a href="#contact">Check availability →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section activity-section" id="activities">
-    <div class="wrap">
-      <div class="section-heading">
-        <div class="eyebrow">Activity Classes</div>
-        <h2>Give talent the space to grow.</h2>
-        <p>
-          Activity classes that encourage self-expression, creativity, movement and confidence.
-        </p>
-      </div>
-
-      <div class="activity-grid">
-        <article class="activity-card art">
-          <div class="activity-top">
-            <span>01</span>
-            <div class="activity-icon">🎨</div>
-          </div>
-          <h3>Art</h3>
-          <p>Explore colour, imagination and expression through fun, guided creative sessions.</p>
-        </article>
-
-        <article class="activity-card music">
-          <div class="activity-top">
-            <span>02</span>
-            <div class="activity-icon">🎵</div>
-          </div>
-          <h3>Music</h3>
-          <p>Develop rhythm, listening skills and musical confidence in an encouraging environment.</p>
-        </article>
-
-        <article class="activity-card dance">
-          <div class="activity-top">
-            <span>03</span>
-            <div class="activity-icon">💃</div>
-          </div>
-          <h3>Zumba</h3>
-          <p>Fun movement sessions that improve fitness, coordination, energy and confidence.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section about-section" id="about">
-    <div class="wrap about-grid">
-      <div class="about-visual">
-        <div class="quote-card">
-          <span>“</span>
-          <p>Every child learns differently. The right environment helps them discover what they are capable of.</p>
-        </div>
-        <div class="visual-badge badge-a">Curiosity</div>
-        <div class="visual-badge badge-b">Confidence</div>
-        <div class="visual-badge badge-c">Creativity</div>
-      </div>
-
-      <div class="about-copy">
-        <div class="eyebrow">About Educatus</div>
-        <h2>Teaching with patience, purpose and positivity.</h2>
-        <p>
-          Educatus is built around a simple idea: children learn best when they understand,
-          participate and feel confident enough to ask questions.
-        </p>
-        <p>
-          Our approach blends academic support with engaging activity classes so children can
-          improve academically while also exploring creativity, movement and self-expression.
-        </p>
-
-        <div class="values">
-          <div><span>✓</span><p><strong>Concept-first learning</strong><br>Understanding comes before memorisation.</p></div>
-          <div><span>✓</span><p><strong>Individual attention</strong><br>Support based on each learner’s pace.</p></div>
-          <div><span>✓</span><p><strong>Positive learning environment</strong><br>Encouragement builds confidence.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="wrap cta-box">
-      <div>
-        <div class="eyebrow light">Admissions & Enquiries</div>
-        <h2>Looking for the right class for your child?</h2>
-        <p>Message Educatus on WhatsApp for current batches, fees, age groups and timings.</p>
-      </div>
-      <a class="btn btn-white" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Educatus%2C%20I%20would%20like%20details%20about%20your%20current%20batches." target="_blank">
-        Chat on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <section class="section contact-section" id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <div class="eyebrow">Contact & Enquiries</div>
-        <h2>Start your Educatus journey.</h2>
-        <p class="contact-intro">
-          Reach out for class timings, fees, availability or to discuss which programme would suit your child best.
-        </p>
-
-        <div class="contact-details">
-          <div>
-            <span>📞</span>
-            <p><strong>Phone / WhatsApp</strong><br>+91 XXXXX XXXXX</p>
-          </div>
-          <div>
-            <span>✉️</span>
-            <p><strong>Email</strong><br>hello@educatus.in</p>
-          </div>
-          <div>
-            <span>📍</span>
-            <p><strong>Location</strong><br>Your area / city</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="enquiry-card">
-        <div class="enquiry-label">QUICK ENQUIRY</div>
-        <h3>Tell us what you are looking for.</h3>
-        <p>For the fastest response, send us a WhatsApp message with:</p>
-        <div class="enquiry-list">
-          <span>Child's grade / age</span>
-          <span>Subject or activity</span>
-          <span>Preferred timing</span>
-        </div>
-        <a class="btn btn-primary full" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Educatus%2C%20I%20would%20like%20to%20enquire.%0A%0AChild's%20grade%2Fage%3A%20%0ASubject%2Factivity%3A%20%0APreferred%20timing%3A%20" target="_blank">
-          Send WhatsApp Enquiry
-        </a>
-      </div>
-    </div>
-  </section>
+<section class="section contact" id="contact"><div class="wrap split"><div class="contact-copy reveal"><small>CONTACT & ENQUIRIES</small><h2>Ready to help your child take the next step?</h2><p>Share a few details and open a ready-to-send WhatsApp enquiry — direct, simple and personal.</p><div class="meta"><div><small>PHONE / WHATSAPP</small><b>+91 XXXXX XXXXX</b></div><div><small>EMAIL</small><b>hello@educatus.in</b></div><div><small>LOCATION</small><b>Your area / city</b></div></div></div><form id="form" class="form reveal d1"><small>QUICK ENQUIRY</small><h3>Tell us what you’re looking for.</h3><label>Parent / Guardian name<input id="name" placeholder="Your name"></label><label>Child’s grade / age<input id="grade" placeholder="e.g. Grade 6 / Age 11"></label><label>Interested in<select id="interest"><option>Mathematics</option><option>Science</option><option>Other Academic Subject</option><option>Art</option><option>Music</option><option>Zumba</option><option>Not sure — need guidance</option></select></label><label>Preferred timing<input id="timing" placeholder="e.g. Weekdays after 5 PM"></label><button class="btn primary full" type="submit">Send Enquiry on WhatsApp →</button><p>Update your WhatsApp number in <code>script.js</code> before publishing.</p></form></div></section>
 </main>
-
-<footer>
-  <div class="wrap footer-grid">
-    <div>
-      <div class="brand footer-brand">
-        <div class="brand-mark">E</div>
-        <div>
-          <div class="brand-name">Educatus</div>
-          <div class="brand-tag">Learn • Explore • Grow</div>
-        </div>
-      </div>
-      <p>Academic support and activity classes for confident, curious learners.</p>
-    </div>
-
-    <div class="footer-links">
-      <a href="#academics">Academic Classes</a>
-      <a href="#activities">Activity Classes</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="copyright">© <span id="year"></span> Educatus</div>
-  </div>
-</footer>
-
-<a class="floating-wa" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Educatus%2C%20I%20would%20like%20to%20enquire." target="_blank" aria-label="WhatsApp Educatus">💬</a>
-
+<footer class="footer"><div class="wrap footer-top"><a class="brand" href="#home"><img src="assets/logo.svg" alt=""><span><b>Educatus</b><small>Learn • Explore • Grow</small></span></a><p>Academic support and activity classes for confident, curious learners.</p><nav><a href="#programs">Programs</a><a href="#activities">Activities</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div><div class="wrap footer-bottom"><span>© <span id="year"></span> Educatus. All rights reserved.</span><span>Designed for confident learning.</span></div></footer>
+<a class="floating wa" href="#" data-msg="Hello Educatus, I would like to enquire about your classes." aria-label="WhatsApp Educatus">✆</a>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
