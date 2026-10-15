@@ -1,28 +1,118 @@
-// Replace with real WhatsApp number: country code + number, no + or spaces.
 const EDUCATUS_WHATSAPP_NUMBER = "919432808518";
-const header=document.getElementById('header'),progress=document.getElementById('progress'),menu=document.getElementById('menu'),nav=document.getElementById('nav');
-function scrollUI(){header.classList.toggle('scrolled',scrollY>15);const t=document.documentElement.scrollHeight-innerHeight;progress.style.width=(t?scrollY/t*100:0)+'%'}addEventListener('scroll',scrollUI,{passive:true});scrollUI();
-menu.onclick=()=>{const o=nav.classList.toggle('open');menu.classList.toggle('open',o);document.body.classList.toggle('lock',o)};nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');menu.classList.remove('open');document.body.classList.remove('lock')});
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
-document.querySelectorAll('.faq-list article').forEach(item=>{const b=item.querySelector('button'),d=item.querySelector('div');b.onclick=()=>{const was=item.classList.contains('open');document.querySelectorAll('.faq-list article.open').forEach(x=>{x.classList.remove('open');x.querySelector('div').style.maxHeight=null});if(!was){item.classList.add('open');d.style.maxHeight=d.scrollHeight+'px'}}});
-function getWhatsAppNumber(){
-  const n=EDUCATUS_WHATSAPP_NUMBER.replace(/\D/g,'');
-  return n.length>=10 ? n : '';
-}
-function url(msg){
-  const n=getWhatsAppNumber();
-  return n ? `https://wa.me/${n}?text=${encodeURIComponent(msg)}` : '';
-}
-function openWhatsApp(msg){
-  const target=url(msg);
-  if(!target){
-    alert('WhatsApp is not configured yet. Replace 919432808518 in script.js with the Educatus WhatsApp number, including country code.');
-    return;
+
+const header = document.getElementById("header");
+const progress = document.getElementById("progress");
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
+
+function handleScroll() {
+  if (header) {
+    header.classList.toggle("scrolled", window.scrollY > 12);
   }
-  window.open(target,'_blank','noopener');
+
+  if (progress) {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = total > 0 ? (window.scrollY / total) * 100 : 0;
+    progress.style.width = percent + "%";
+  }
 }
-document.querySelectorAll('.wa').forEach(a=>a.onclick=e=>{
-  e.preventDefault();
-  openWhatsApp(a.dataset.msg||'Hello Educatus, I would like to enquire about your classes.');
+
+window.addEventListener("scroll", handleScroll, { passive: true });
+handleScroll();
+
+if (menu && nav) {
+  menu.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    menu.classList.toggle("open", isOpen);
+    document.body.classList.toggle("lock", isOpen);
+  });
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menu.classList.remove("open");
+      document.body.classList.remove("lock");
+    });
+  });
+}
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+document.querySelectorAll(".faq-list article").forEach(item => {
+  const button = item.querySelector("button");
+  const answer = item.querySelector("div");
+
+  if (!button || !answer) return;
+
+  button.addEventListener("click", () => {
+    const alreadyOpen = item.classList.contains("open");
+
+    document.querySelectorAll(".faq-list article.open").forEach(openItem => {
+      openItem.classList.remove("open");
+      const openAnswer = openItem.querySelector("div");
+      if (openAnswer) openAnswer.style.maxHeight = null;
+    });
+
+    if (!alreadyOpen) {
+      item.classList.add("open");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+  });
 });
-document.getElementById('form').onsubmit=e=>{e.preventDefault();const msg=`Hello Educatus, I would like to enquire about your classes.\n\nParent / Guardian: ${document.getElementById('name').value||'Not provided'}\nChild's grade / age: ${document.getElementById('grade').value||'Not provided'}\nInterested in: ${document.getElementById('interest').value}\nPreferred timing: ${document.getElementById('timing').value||'Flexible'}\n\nPlease share the available batches, timings and fees.`;openWhatsApp(msg)};document.getElementById('year').textContent=new Date().getFullYear();
+
+function buildWhatsAppUrl(message) {
+  return `https://wa.me/${EDUCATUS_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+document.querySelectorAll(".wa").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+
+    const message =
+      link.dataset.msg ||
+      "Hello Educatus, I would like to enquire about your classes.";
+
+    window.location.href = buildWhatsAppUrl(message);
+  });
+});
+
+const form = document.getElementById("form");
+
+if (form) {
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const name = document.getElementById("name")?.value.trim() || "Not provided";
+    const grade = document.getElementById("grade")?.value.trim() || "Not provided";
+    const interest = document.getElementById("interest")?.value || "Not specified";
+    const timing = document.getElementById("timing")?.value.trim() || "Flexible";
+
+    const message = `Hello Educatus, I would like to enquire about your classes.
+
+Parent / Guardian: ${name}
+Child's grade / age: ${grade}
+Interested in: ${interest}
+Preferred timing: ${timing}
+
+Please share the available batches, timings and fees.`;
+
+    window.location.href = buildWhatsAppUrl(message);
+  });
+}
+
+const year = document.getElementById("year");
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
