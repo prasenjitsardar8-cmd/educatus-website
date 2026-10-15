@@ -5,6 +5,24 @@ function scrollUI(){header.classList.toggle('scrolled',scrollY>15);const t=docum
 menu.onclick=()=>{const o=nav.classList.toggle('open');menu.classList.toggle('open',o);document.body.classList.toggle('lock',o)};nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');menu.classList.remove('open');document.body.classList.remove('lock')});
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
 document.querySelectorAll('.faq-list article').forEach(item=>{const b=item.querySelector('button'),d=item.querySelector('div');b.onclick=()=>{const was=item.classList.contains('open');document.querySelectorAll('.faq-list article.open').forEach(x=>{x.classList.remove('open');x.querySelector('div').style.maxHeight=null});if(!was){item.classList.add('open');d.style.maxHeight=d.scrollHeight+'px'}}});
-function url(msg){return `https://wa.me/${EDUCATUS_WHATSAPP_NUMBER.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`}
-document.querySelectorAll('.wa').forEach(a=>a.onclick=e=>{e.preventDefault();open(url(a.dataset.msg||'Hello Educatus, I would like to enquire about your classes.'),'_blank','noopener')});
-document.getElementById('form').onsubmit=e=>{e.preventDefault();const msg=`Hello Educatus, I would like to enquire about your classes.\n\nParent / Guardian: ${document.getElementById('name').value||'Not provided'}\nChild's grade / age: ${document.getElementById('grade').value||'Not provided'}\nInterested in: ${document.getElementById('interest').value}\nPreferred timing: ${document.getElementById('timing').value||'Flexible'}\n\nPlease share the available batches, timings and fees.`;open(url(msg),'_blank','noopener')};document.getElementById('year').textContent=new Date().getFullYear();
+function getWhatsAppNumber(){
+  const n=EDUCATUS_WHATSAPP_NUMBER.replace(/\D/g,'');
+  return n.length>=10 ? n : '';
+}
+function url(msg){
+  const n=getWhatsAppNumber();
+  return n ? `https://wa.me/${n}?text=${encodeURIComponent(msg)}` : '';
+}
+function openWhatsApp(msg){
+  const target=url(msg);
+  if(!target){
+    alert('WhatsApp is not configured yet. Replace 91XXXXXXXXXX in script.js with the Educatus WhatsApp number, including country code.');
+    return;
+  }
+  window.open(target,'_blank','noopener');
+}
+document.querySelectorAll('.wa').forEach(a=>a.onclick=e=>{
+  e.preventDefault();
+  openWhatsApp(a.dataset.msg||'Hello Educatus, I would like to enquire about your classes.');
+});
+document.getElementById('form').onsubmit=e=>{e.preventDefault();const msg=`Hello Educatus, I would like to enquire about your classes.\n\nParent / Guardian: ${document.getElementById('name').value||'Not provided'}\nChild's grade / age: ${document.getElementById('grade').value||'Not provided'}\nInterested in: ${document.getElementById('interest').value}\nPreferred timing: ${document.getElementById('timing').value||'Flexible'}\n\nPlease share the available batches, timings and fees.`;openWhatsApp(msg)};document.getElementById('year').textContent=new Date().getFullYear();
